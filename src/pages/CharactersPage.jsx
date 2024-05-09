@@ -7,10 +7,12 @@ export default function CharactersPage() {
     
     return(
         <main>
-            <div className="flex gap-4 justify-center flex-wrap">
-            {data.results.map((d) => (
-        <CCard key={d.id} name={d.name} image={d.image} id={d.id} genre={d.species}/>
-      ))}</div>
+            <h1 className="flex justify-center my-8 font-bold text-6xl">Characters</h1>
+            <div className="flex gap-4 justify-center flex-wrap">  
+                {data.results.map((c) => (
+                <CCard key={c.id} c={c}/>
+                ))}
+            </div>
         </main>
     )
 }
